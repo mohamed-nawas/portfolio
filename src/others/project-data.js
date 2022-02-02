@@ -77,9 +77,12 @@ export const projects = [
       "React Native SVG",
     ],
     concepts: [
-      "React Native navigation",
-      "React states",
-      "React Native Stack, Bottom tab navigators",
+      "React Native navigation [Stacks, Bottom Tab]",
+      "Dynamic rendering of components",
+      "Reading and writing data on Async Storage",
+      "React life cycle methods",
+      "Firebase functions [Authentication, Real time database, Storage, Cloud messaging]",
+      "Push notifications",
     ],
     sliderData: [
       {
