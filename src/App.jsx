@@ -11,7 +11,7 @@ import Detail from "./pages/Detail";
 export default function App() {
   return (
     <>
-      <div className="content">
+      <div>
         <Header />
         <main>
           <Routes>

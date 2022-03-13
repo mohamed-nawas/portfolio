@@ -39,12 +39,12 @@ const ImageSlider = ({ slides, platform }) => {
             {index === current && platform === "Mobile" && (
               <img
                 src={slide.image}
-                alt="travel image"
-                className="image-mobile"
+                alt=""
+                className="image-mobile img-fluid"
               />
             )}
             {index === current && platform === "Web" && (
-              <img src={slide.image} alt="travel image" className="image-web" />
+              <img src={slide.image} alt="" className="image-web img-fluid" />
             )}
           </div>
         );

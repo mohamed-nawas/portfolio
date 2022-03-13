@@ -1,27 +1,21 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <>
-      <section id="products">
-        <section id="home-content">
-          <button
-            style={{
-              width: 100,
-              height: 40,
-              borderRadius: 5,
-              fontWeight: "bold",
-              fontSize: 14,
-            }}
-            onClick={() => navigate("/about")}
-          >
+    <section className="home" style={{ backgroundColor: "#2b2f32" }}>
+      <section className="row">
+        <section className="col-md-6">
+          <Button active variant="outline-primary">
             Developer
-          </button>
+          </Button>
           <div>
-            <h2>Nawaz Mohamed</h2>
+            <h2 style={{ color: "#d7d7d7", marginTop: 20, marginBottom: 20 }}>
+              Nawaz Mohamed
+            </h2>
           </div>
           <div>
             <p
@@ -73,7 +67,7 @@ export default function Home() {
 
             <p
               style={{
-                padding: 0,
+                // padding: 0,
                 marginTop: 10,
                 marginBottom: 0,
                 textAlign: "left",
@@ -91,12 +85,13 @@ export default function Home() {
               and many more.
             </p>
             <span>
-              <button
+              <Button
+                variant="secondary"
                 style={{ marginTop: 5, marginBottom: 15, marginLeft: -3 }}
                 onClick={() => navigate("/about")}
               >
                 Read More...
-              </button>
+              </Button>
             </span>
             <p
               style={{
@@ -110,31 +105,19 @@ export default function Home() {
               For all the technologies and features worked on, please take a
               look at the projects here
             </p>
-            <button
-              style={{
-                width: 100,
-                height: 40,
-                borderRadius: 5,
-                fontWeight: "bold",
-                fontSize: 14,
-                backgroundColor: "#1689e0",
-                color: "white",
-              }}
+            <Button
+              variant="outline-success"
               onClick={() => navigate("/projects")}
             >
               Projects
-            </button>
+            </Button>
           </div>
         </section>
 
-        <div>
-          <img
-            id="image-author"
-            alt="author-image"
-            src="images/home-image.png"
-          />
+        <div className="col-md-6 home-img">
+          <img className="img-fluid" alt="" src="images/home-image.png" />
         </div>
       </section>
-    </>
+    </section>
   );
 }

@@ -2,7 +2,15 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer
+      style={{
+        textAlign: "center",
+        paddingTop: 50,
+        paddingBottom: 40,
+        backgroundColor: "#d7d7d7",
+        color: "#8a8a8a",
+      }}
+    >
       <p>
         This site is created for demonstrative purposes only and does not offer
         any real products or services.

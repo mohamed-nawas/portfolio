@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { projects } from "../others/project-data";
+import Button from "react-bootstrap/Button";
 
 export default function Detail() {
   const { id } = useParams();
@@ -8,8 +9,17 @@ export default function Detail() {
 
   return (
     <>
-      <section className="project-detail">
-        <section className="detail-description">
+      <section
+        className="row"
+        style={{
+          backgroundColor: "#26292c",
+          paddingRight: 25,
+          paddingLeft: 25,
+          paddingTop: 25,
+          paddingBottom: 25,
+        }}
+      >
+        <section className="col-md-8">
           <h3 style={{ color: "white", fontWeight: "bold" }}>
             {project.projectTitle}
           </h3>
@@ -18,27 +28,35 @@ export default function Detail() {
               {p}
             </p>
           ))}
-          <button style={{ width: 90, height: 30, borderRadius: 5 }}>
+          <Button
+            variant="outline-primary"
+            style={{ marginTop: 20 }}
+            id="repo-btn"
+          >
             <a
               target="_blank"
               href={project.repoLink}
-              style={{ color: "#2b2f32", fontWeight: "bold" }}
+              style={{
+                color: "white",
+                textDecoration: "none",
+              }}
+              rel="noreferrer"
             >
               Repo Link
             </a>
-          </button>
+          </Button>
         </section>
-        <section className="detail-other">
-          <section className="detail-concepts">
-            <h3 className="other-heading">Technologies</h3>
+        <section className="col-md-4">
+          <section className="detail-other">
+            <h3 style={{ color: "white", marginLeft: 15 }}>Technologies</h3>
             <ul>
               {project.technologies.map((t) => (
                 <li key={t}>{t}</li>
               ))}
             </ul>
           </section>
-          <section className="detail-technology">
-            <h3 className="other-heading">Concepts</h3>
+          <section className="detail-other">
+            <h3 style={{ color: "white", marginLeft: 15 }}>Concepts</h3>
             <ul>
               {project.concepts.map((c) => (
                 <li key={c}>{c}</li>
